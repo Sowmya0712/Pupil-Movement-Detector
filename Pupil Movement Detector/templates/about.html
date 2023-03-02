@@ -1,0 +1,114 @@
+<html>
+    <head>
+        <title>Pupil Movement Detector</title>  
+        
+        <script type="text/javascript">
+  function show(){
+  document.getElementById("f").style.visibility = "visible";
+  }
+  
+  function hide(){
+  document.getElementById("f").style.visibility = "hidden";
+  }
+  </script>
+  
+  <link rel="stylesheet" type="text/css" href="static\style.css">
+        
+    </head>
+    <body>
+        <div id="background-image"> 
+            <h1> Pupil Movement Detector </h1>
+            
+          <div class="color-overlay"> 
+              
+             </div> 
+            
+            </div> 
+        
+        <div class="fcontainer">
+        <div class="content-section"> 
+            
+            
+<div class="content">
+<h2>Introduction</h2>             
+<p>The Covid-19 pandemic has been a truly unprecedented event in modern history, having affected nearly all countries, with lockdowns forcing millions to rapidly adapt to working, learning and playing while being stuck indoors. <br>
+    Within the span of a year or less, the world has had to shift almost entirely online. The education sector has been no stranger to this shift and in fact, has seen some of the most dramatic changes of all, with e-learning seeing a major rise in participation and enrolments.</p>
+
+<p><b>E-learning</b> or <b>online learning</b> refers to learning conducted via electronic media, typically on the internet. It encompasses various ways to learn online like MOOCs (Massive Open Online Courses) (Example Coursera, Udemy, etc.), with EdTech companies (Example Byju’s), etc. Online learning can also be synchronous or asynchronous, which allow flexibility. Online learning has many more advantages such as more personalized learning environments, saving of time and money, cost-effectiveness and allowing easy access to quality education to anyone. But Online learning also has some disadvantages. With now having experienced nearly two years of online school/college, educators have been heard raising one common, but major issue, over and over on online education i.e., the veracity of online examinations. Examinations conducted through online modes are more susceptible to malpractice by students. With proctors unable to adequately monitor students, students are able to indulge in cheating. This is a big problem which damages the learning process of the student and brings down the quality of education received.</p> 
+
+<p>Thus, solutions to this problem are in urgent requirement, which can be implemented during online examinations using already in-use resources, E.g., Webcams. With all this in mind, we were inspired to build an “Intelligent Pupil Detector for Online Examinations”, to better the scene of online examinations and eventually improve the learning process of students during these pandemic times.</p>
+
+<h2><u><b>About the project</b></u></h2>
+<p><ul>
+<li>The project has been implemented using python, HTML, CSS and JavaScript.</li>
+<li>The code for the detector is written using the popular python library, OpenCV. It also uses the famous “Haar Cascade Classifier” to detect the face and eye. The python micro-framework, Flask, is being used to create the web application.</li>
+<li>The backend of the project consists of the code for the detector. Frontend consists of the website through which users interact with the detector and see the results.</li>
+<li>The detector accurately detects the pupil and tracks it. It also provides useful information regarding the movement of the pupil.</li>
+<li>Users can choose to either upload a video or use the webcam for detection.</li></ul>
+              
+            </div> 
+        
+        </div> 
+
+        <div class="image-section"> 
+            <img src="static/image1.jpg" alt="exam"> 
+        </div>
+            
+        </div> 
+        
+        <br>
+        <br> 
+       
+        <div class="sample-image"> 
+            <h2>Sample Images Captured</h2>
+         <img src="static/out1.png" width=48% border="10" style="float:left; margin-bottom:10px; border-color:#93FFE8;"/>
+         <img src="static/out2.png" width=47% border="10" style="float:right; margin-bottom:50px; border-color:#93FFE8;"/>
+        
+        </div> 
+        
+<div class="scontainer">
+    <div class="stitle">
+        <h2><u>Instructions for use:</u></h2></div>
+<ol>
+<li>Input to the pupil detector can be given as a <b>video</b> or through <b>webcam</b>. Select preferred option from the form given below.
+<ul style="list-style-type: square;">
+<li><b>Video upload:</b> Select the option and upload file. If video is not uploaded, default video will play.</li>
+<li><b>Webcam:</b> Ensure that permission to use webcam is enabled.</li>
+</ul>
+</li>
+<li>Clicking "submit" will direct you to the page where pupil detection will take place.</li>
+</ol>
+
+<blockquote style="background-color:#93FFE8; padding:5px;"><b>Note: In both of these inputs
+<ul>
+<li>The face must be well within the frame</li>
+<li>Both eyes must be visible (No side profile)</li>
+<li>Room should be well-lit</li>
+<li>Objects blocking the face may cause accuracy to fall</li></ul>
+</b></blockquote>
+
+
+<h2>Please input the parameters:</h2><br />
+    <blockquote style="background-color:#93FFE8; padding:5px;">
+	<div class="form">
+	<form action = "http://127.0.0.1:5000/res" method = "POST" enctype = "multipart/form-data">
+		<h3><u>Choose mode:</u></h3>
+		<label><b>Webcam</b> <input type="radio" name="mode" value="WEBCAM" onclick="hide()" checked/></label> <br />
+		<label><b>Upload a video</b> <input type="radio" name="mode" value="VIDEO" onclick="show()"/></label>		
+		<div id="f">
+		<label>Upload video file: <input type="file" name="file"/></label>
+		</div><br />
+		<input type = "submit" value = "Submit" />
+		<input type = "reset" value = "Reset" onclick = "hide()"/>
+	</form>
+        </div> </blockquote> 
+</div>
+<br />
+<br />
+<br />
+<br />
+<br />
+
+
+    </body>
+</html>
